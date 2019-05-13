@@ -14,7 +14,7 @@ public class Phone_DAO {
 	Connection conn = null;
 	PreparedStatement pst = null;
 	ResultSet rs = null;
-	private final String url = "jdbc:oracle:thin:@192.168.0.20:1521:xe";
+	private final String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 	private final String user = "hr";
 	private final String password = "hr";
 
@@ -150,6 +150,28 @@ public class Phone_DAO {
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	public ArrayList<String> selectID() {
+		conn();
+		ArrayList<String> list = new ArrayList<String>();
+		String sql = "select name from phone";
+		
+		try {
+			pst = conn.prepareStatement(sql);
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				String id = rs.getString(1);
+				list.add(id);
+			}
+			return list;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+		
 	}
 
 }
