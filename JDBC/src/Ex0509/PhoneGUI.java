@@ -116,50 +116,50 @@ public class PhoneGUI {
 		sl_panel_4.putConstraint(SpringLayout.NORTH, label1, 64, SpringLayout.NORTH, panel_4);
 		sl_panel_4.putConstraint(SpringLayout.WEST, label1, 36, SpringLayout.WEST, panel_4);
 		sl_panel_4.putConstraint(SpringLayout.SOUTH, label1, -240, SpringLayout.SOUTH, panel_4);
-		sl_panel_4.putConstraint(SpringLayout.EAST, label1, -171, SpringLayout.EAST, panel_4);
 		label1.setFont(new Font("궁서", Font.BOLD, 20));
 		panel_4.add(label1);
 		
 		JLabel label2 = new JLabel("나이");
 		sl_panel_4.putConstraint(SpringLayout.NORTH, label2, 64, SpringLayout.SOUTH, label1);
 		sl_panel_4.putConstraint(SpringLayout.WEST, label2, 36, SpringLayout.WEST, panel_4);
-		sl_panel_4.putConstraint(SpringLayout.SOUTH, label2, -152, SpringLayout.SOUTH, panel_4);
-		sl_panel_4.putConstraint(SpringLayout.EAST, label2, -171, SpringLayout.EAST, panel_4);
+		sl_panel_4.putConstraint(SpringLayout.EAST, label2, 0, SpringLayout.EAST, label1);
 		label2.setFont(new Font("궁서", Font.BOLD, 20));
 		panel_4.add(label2);
 		
 		JLabel label3 = new JLabel("전화번호");
-		sl_panel_4.putConstraint(SpringLayout.NORTH, label3, 64, SpringLayout.SOUTH, label2);
+		sl_panel_4.putConstraint(SpringLayout.SOUTH, label2, -64, SpringLayout.NORTH, label3);
+		sl_panel_4.putConstraint(SpringLayout.EAST, label1, 0, SpringLayout.EAST, label3);
+		sl_panel_4.putConstraint(SpringLayout.NORTH, label3, 240, SpringLayout.NORTH, panel_4);
+		sl_panel_4.putConstraint(SpringLayout.EAST, label3, -241, SpringLayout.EAST, panel_4);
 		sl_panel_4.putConstraint(SpringLayout.WEST, label3, 36, SpringLayout.WEST, panel_4);
-		sl_panel_4.putConstraint(SpringLayout.EAST, label3, -171, SpringLayout.EAST, panel_4);
 		label3.setFont(new Font("궁서", Font.BOLD, 20));
 		panel_4.add(label3);
 		
 		JLabel lbl_name = new JLabel("-");
-		sl_panel_4.putConstraint(SpringLayout.EAST, lbl_name, 97, SpringLayout.EAST, label1);
+		sl_panel_4.putConstraint(SpringLayout.EAST, lbl_name, -11, SpringLayout.EAST, panel_4);
 		lbl_name.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_name.setEnabled(false);
 		lbl_name.setFont(new Font("궁서체", Font.BOLD, 20));
 		sl_panel_4.putConstraint(SpringLayout.NORTH, lbl_name, 70, SpringLayout.NORTH, panel_4);
-		sl_panel_4.putConstraint(SpringLayout.WEST, lbl_name, 6, SpringLayout.EAST, label1);
 		panel_4.add(lbl_name);
 		
 		JLabel lbl_age = new JLabel("-");
-		sl_panel_4.putConstraint(SpringLayout.EAST, lbl_age, 0, SpringLayout.EAST, lbl_name);
+		sl_panel_4.putConstraint(SpringLayout.WEST, lbl_age, 0, SpringLayout.WEST, lbl_name);
+		sl_panel_4.putConstraint(SpringLayout.EAST, lbl_age, -11, SpringLayout.EAST, panel_4);
 		lbl_age.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_age.setEnabled(false);
 		lbl_age.setFont(new Font("궁서체", Font.BOLD, 20));
 		sl_panel_4.putConstraint(SpringLayout.NORTH, lbl_age, 70, SpringLayout.SOUTH, lbl_name);
-		sl_panel_4.putConstraint(SpringLayout.WEST, lbl_age, 6, SpringLayout.EAST, label2);
 		panel_4.add(lbl_age);
 		
 		JLabel lbl_tel = new JLabel("-");
 		sl_panel_4.putConstraint(SpringLayout.NORTH, lbl_tel, 70, SpringLayout.SOUTH, lbl_age);
-		sl_panel_4.putConstraint(SpringLayout.EAST, lbl_tel, 0, SpringLayout.EAST, lbl_name);
+		sl_panel_4.putConstraint(SpringLayout.WEST, lbl_name, 0, SpringLayout.WEST, lbl_tel);
+		sl_panel_4.putConstraint(SpringLayout.WEST, lbl_tel, 76, SpringLayout.EAST, label3);
+		sl_panel_4.putConstraint(SpringLayout.EAST, lbl_tel, -11, SpringLayout.EAST, panel_4);
 		lbl_tel.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_tel.setEnabled(false);
 		lbl_tel.setFont(new Font("궁서체", Font.BOLD, 20));
-		sl_panel_4.putConstraint(SpringLayout.WEST, lbl_tel, 6, SpringLayout.EAST, label3);
 		panel_4.add(lbl_tel);
 		frame.getContentPane().add(panel_2);
 		SpringLayout sl_panel_2 = new SpringLayout();
